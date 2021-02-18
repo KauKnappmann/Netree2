@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NeTree</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="../css/fonts/icomoon/style.css">
+    <link rel="icon" href="../css/images/logoVerde.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/css/aos.css">
+    <link rel="stylesheet" href="../css/css/style.css">
+
+      <style>
+        html{
+          background-image:linear-gradient( #FFFFFF 1%,#4BBF7D 99%);
+          min-height: 100vh;
+        }
+        body{
+          background-color: transparent;
+          min-height: 100vh;
+        }
+      </style>
+      
+  </head>
+  <body>
+    <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col"></div>
+          <div class="col">
+            <h2 class="h3 mb-3 text-black">Cadastro</h2>
+          </div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <form action="../classes/user/user.php" method="post" enctype="multipart/form-data" style="background-color: #FFFFFF;">
+              
+              <div class="p-3 p-lg-5 border">
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="imagem" class="text-black">Foto de perfil</label>
+                    <input type="file" class="form-control" id="imagem" name="imagem">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_nome" class="text-black">Nome <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_sobrenome" name="nome" 
+                    pattern="([aA-zZ]+)" title="Neste campo só são permitidas letras." required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_sobrenome" class="text-black">Sobrenome <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_sobrenome" name="sobrenome" 
+                    pattern="([aA-zZ]+)" title="Neste campo só são permitidas letras." required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_email" class="text-black">E-mail <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="c_email" name="email" 
+                    pattern="[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="São permitidos caracteres de A - Z ou de 0 - 9, ( _ ), ( - ) e ( . ), sem espaço e sem acentuação." required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_password" class="text-black">Senha <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="c_password" name="senha" minlength="7" 
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}" maxlength="15" title="Senha deve conter pelo menos um número e uma letra maiúscula e minúscula." required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_birth" class="text-black">Data de Nascimento <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="c_birth" name="dataNasc" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_cpf" class="text-black">CPF <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_cpf" name="CPF" minlength="11" maxlength="11"required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_gen" class="text-black">Gênero </label>
+                    <select class="form-control" id="c_gen" name="genero">
+                      <option value="Feminino">Feminino</option>
+                      <option value="Masculino">Masculino</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                    <!-- <input type="text" class="form-control" id="c_gen" name="genero"> -->
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_tel" class="text-black">Telefone </label>
+                    <input type="text" class="form-control" id="c_tel" name="telefone">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-lg-12">
+                    <input type="hidden" value="1" name="table">
+                    <button style="background-color:#4bbf7d; border-color:#4bbf7d;" type="submit" class="btn btn-primary btn-lg btn-block" >Cadastrar</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col"></div>
+        </div>
+        <h6 style="margin-top: 25px;"><center>Developed by Alessandra, Camila, Diógenes, Hanattan, Kauana, Maria and Mateus <br> &copy;<script>document.write(new Date().getFullYear());</script> <i class="icon-heart" aria-hidden="true"></i></center></h6>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
+

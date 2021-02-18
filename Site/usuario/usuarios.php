@@ -60,8 +60,8 @@
                 <li class="has-children ">
                   <a href="home.php" title="Produtos">Produtos</a>
                   <ul class="dropdown">
-                    <li><a href="MostraPlantas.php" title="Plantas">Plantas</a></li>
-                    <li><a href="MostraProdutos.php" title="Outros">Outros</a></li>
+                    <li><a href="../produto/MostraPlantas.php" title="Plantas">Plantas</a></li>
+                    <li><a href="../produto/MostraProdutos.php" title="Outros">Outros</a></li>
                   </ul>
                 </li>
                 <li><a href="../contact.html" title="Contato">Contato</a></li>
@@ -71,8 +71,8 @@
           </div>
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open" title="Buscar"><span class="icon-search"></span></a>
-            <a href="usuario/login.html" class="icons-btn d-inline-block" title="Usuário"><span class="icon-user"></span></a>
-            <a href="carrinho.html" class="icons-btn d-inline-block bag" title="Carrinho">
+            <a href="login.html" class="icons-btn d-inline-block" title="Usuário"><span class="icon-user"></span></a>
+            <a href="../carrinho.html" class="icons-btn d-inline-block bag" title="Carrinho">
               <span class="icon-shopping-bag"></span>
               <!-- <span class="number">2</span> -->       
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>

@@ -16,20 +16,6 @@
     <link rel="stylesheet" href="../css/css/aos.css">
     <link rel="stylesheet" href="../css/css/style.css">
     <script type="text/javascript" src="../css/js/cards.js"></script>
-    <!-- <script>
-      
-      alert("Programador, não esqueça de atualizar o git");
-      
-      </script> -->
-
-      <style>
-.quatro {
-  width:25%;
-  text-align: center;
-  margin-top: 0.5cm;
-}
-
-      </style>
   </head>
   <body>
   
@@ -51,7 +37,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="../home.php" class="js-logo-clone" title="Início">NeTree</a>
+            <a href="home.php" class="js-logo-clone" title="Início">NeTree</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
@@ -61,7 +47,7 @@
                   <a href="../home.php" title="Produtos">Produtos</a>
                   <ul class="dropdown">
                     <li><a href="MostraPlantas.php" title="Plantas">Plantas</a></li>
-                    <li><a href="MostraProdutos.php" title="Outros">Outros</a></li>
+                    <a href="home.php" title="Produtos">Produtos</a>
                   </ul>
                 </li>
                 <li><a href="../contact.html" title="Contato">Contato</a></li>

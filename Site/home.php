@@ -81,7 +81,7 @@ if (!isset($_GET['erro'])){
  
     
     if(count($plantas)>0){
-
+        echo "&nbsp‎";
     foreach($plantas as $planta){   
         
         $plantas_sub = $plantas_sub."<div class='item'><div class='item-entry'><a href='produto/prodInfo.html' class='product-item md-height bg-gray d-block'><img style='width: 250px;height: 250px;' src='Upload/Plantas/".$planta['img']."' alt='Image' class='img-fluid'></a>";

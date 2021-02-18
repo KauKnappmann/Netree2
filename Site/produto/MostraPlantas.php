@@ -125,10 +125,10 @@
         if(count($plantas)>0){
     
         foreach($plantas as $planta){   
-          
+         
            echo $plantas_sub."<div class='quatro'><img style='width: 200px;height: 200px;' src='../Upload/Plantas/".$planta['img']."'>";
-           echo $plantas_sub."<b><h6>".$planta['tipo']."</b><br>".$planta['nome']."<p style='color: red;'>R$ ".$planta['valor']."</p><form action='prodInfo.html'><button class='btn-sm btn-outline-primary' 
-           style='width: 60%;' type='submit' formaction='prodInfo.html'>Comprar</button></form></h6></div>";
+           echo $plantas_sub."<b><h6>".$planta['tipo']."</b><br>".$planta['nome']."<p style='color: red;'>R$ ".$planta['valor']."</p><form action='produtos.php' type='GET'><button class='btn-sm btn-outline-primary' 
+           style='width: 60%;' type='submit' name='cod' value='plantas&".($planta['cod']-1)."'>Comprar</button></form></h6></div>";
           }
         }
         

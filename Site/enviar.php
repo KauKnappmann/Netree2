@@ -20,13 +20,13 @@ use PHPMailer\PHPMailer\Exception;
 	$mail->isSMTP();
 	$mail->Host = 'smtp.gmail.com';
 	$mail->SMTPAuth = true;
-	$mail->Username = 'GrupoNetree@gmail.com';
+	$mail->Username = 'gruponetree@gmail.com';
 	$mail->Password = '.netree01.';
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
 	$mail->Port = 587;
  
-	$mail->setFrom('GrupoNetree@gmail.com');
-	$mail->addAddress('GrupoNetree@gmail.com', 'NETREE');
+	$mail->setFrom('gruponetree@gmail.com');
+	$mail->addAddress('gruponetree@gmail.com', 'NETREE');
 	$mail->addReplyTo($email, $nome);
  
 	$mail->isHTML(true);

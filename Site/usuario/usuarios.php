@@ -72,7 +72,6 @@
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open" title="Buscar"><span class="icon-search"></span></a>
             <a href="usuario/login.html" class="icons-btn d-inline-block" title="Usuário"><span class="icon-user"></span></a>
-            <a href="#" class="icons-btn d-inline-block"><span class="icon-heart-o" title="Favoritos"></span></a>
             <a href="carrinho.html" class="icons-btn d-inline-block bag" title="Carrinho">
               <span class="icon-shopping-bag"></span>
               <!-- <span class="number">2</span> -->       

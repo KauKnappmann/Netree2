@@ -51,7 +51,7 @@ class Adm{
 
             case 2:
 
-             $sql = $sql."produtos(nome, tipo, estoque,valor, img) VALUES(";
+             $sql = $sql."produtos(nome, estoque, tipo, valor, img) VALUES(";
              $arch = "Produtos/";
 
             break;

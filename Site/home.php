@@ -65,14 +65,12 @@ if (!isset($_GET['erro'])){
              $html);
         }
             
-    }else{
-     $html = str_replace('{{nome}}'," ",$html);
-     $html = str_replace('{{adm}}'," ",$html);
     }
 
 }else
  echo $adm->mensagemErro($_GET['erro']);
-
+ $html = str_replace('{{nome}}'," ",$html);
+ $html = str_replace('{{adm}}'," ",$html);
 
 ?>
 

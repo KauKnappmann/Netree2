@@ -13,7 +13,7 @@ try{
      }
 
      $do = isset($_POST['doit']) ? $_POST['doit'] : 0;
-
+     //var_dump($_POST);
         $link = "location:../../home.php";
 
     switch($do){
@@ -29,9 +29,8 @@ try{
             $info[$name] = $value;
             
          $info['img'] = $_FILES['imagem']['name'];
-         $info['senha'] = $info['senha'];
-         
-         //var_dump($info);
+        
+        
          
          $cad = $adm->register($table,$info);
          var_dump($cad);

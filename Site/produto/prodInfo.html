@@ -16,11 +16,6 @@
     <link rel="stylesheet" href="../css/css/aos.css">
     <link rel="stylesheet" href="../css/css/style.css">
     <script type="text/javascript" src="../css/js/cards.js"></script>
-    <!-- <script>
-      
-      alert("Programador, não esqueça de atualizar o git");
-      
-      </script> -->
 
       <style>
       .displayed {
@@ -58,7 +53,7 @@
                   <a href="home.php" title="Produtos">Produtos</a>
                   <ul class="dropdown">
                     <li><a href="MostraPlantas.php" title="Plantas">Plantas</a></li>
-                    <li><a href="#" title="Outros">Outros</a></li>
+                    <li><a href="MostraProdutos.php" title="Outros">Outros</a></li>
                   </ul>
                 </li>
                 <li><a href="../contact.html" title="Contato">Contato</a></li>
@@ -119,44 +114,42 @@
               <p class="mb-0" id="valorTotalProduto">R${{valor}} a unidade</p><br>
               Quantidade:  
               <div class="input-group mb-3" style="max-width: 120px;">
-                        <!-- <div class="input-group-prepend">
-                         <button class="btn btn-outline-primary js-btn-minus"  onclick="exclui()" type="button">&minus;</button>
+                       <div class="input-group-prepend">
+                         <button class="btn btn-outline-primary"  onclick="exclui()">&minus;</button>
                         </div>
-                        <input type="text" class="form-control text-center" name="valorQuant" aria-label="Example text with button addon" >
-                        <script>document.write(" [ "+valorQuant+" ] ")</script>
+                        <!-- <h6 id="valorQuant" style="float: right;" value="1"><script>document.write(valorQuant)</script></h6></input> -->
+                        <input type="text" class="form-control text-center" name="valorQuant" id="valorQuant" value="1">
                         <div class="input-group-append">
-                          <button class="btn btn-outline-primary js-btn-plus"  onclick="soma()" type="button">&plus;</button>
-                        </div> -->
-                        <button onclick="soma()" style="float: right;">+</button>
-                    <h6 id="valorQuant" style="float: right;" value="1"><script>document.write(valorQuant)</script></h6>
-                    <button onclick="exclui()" style="float: right;">-</button>
-                      </div>
-                <p class="mb-0" id="valorTotalProduto"></p>      
+                          <button class="btn btn-outline-primary"  onclick="soma()">&plus;</button>
+                        </div>
+                        <br>
+                        <br>
+                        <form action="produtos.php" type="get"><button class="btn-sm btn-outline-primary" style="width: 160%;" type="submit" name="cod" value="">Comprar</button></form>
+                      </div>     
             </div>
 <script>
   
  valorQuant=1;
  valor = "{{valor}}";
- document.write(valor);
- document.write(valorQuant);
- function soma(){
-   //quantidade = document.getElementById("quantidade").value;
 
+ function soma(){
+   
     valorQuant = valorQuant+ 1;
 
-     document.getElementById("valorQuant").innerHTML = valorQuant;
+     document.getElementById("valorQuant").value = valorQuant;
      valorT();
 }
 function exclui(){
-   //quantidade = document.getElementById("quantidade").value;
-
+   
     valorQuant = valorQuant- 1;
 
-     document.getElementById("valorQuant").innerHTML = valorQuant;
+     document.getElementById("valorQuant").value = valorQuant;
      valorT();
 }
 function valorT(){
+
  valorTotalProduto =  valorQuant* valor;
+
  document.getElementById("valorTotalProduto").innerHTML = "Valor total: R$" + valorTotalProduto;
     
 }

@@ -16,6 +16,16 @@
     <link rel="stylesheet" href="../css/css/aos.css">
     <link rel="stylesheet" href="../css/css/style.css">
     <script type="text/javascript" src="../css/js/cards.js"></script>
+
+    <style>
+.quatro {
+  width:25%;
+  text-align: center;
+  margin-top: 0.5cm;
+}
+
+      </style>
+
   </head>
   <body>
   
@@ -37,17 +47,17 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-            <a href="home.php" class="js-logo-clone" title="Início">NeTree</a>
+            <a href="../home.html" class="js-logo-clone" title="Início">NeTree</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="has-children ">
-                  <a href="../home.php" title="Produtos">Produtos</a>
+                  <a href="#" title="Produtos">Produtos</a>
                   <ul class="dropdown">
                     <li><a href="MostraPlantas.php" title="Plantas">Plantas</a></li>
-                    <a href="home.php" title="Produtos">Produtos</a>
+                    <a href="MostraProdutos.php" title="Produtos">Outros</a>
                   </ul>
                 </li>
                 <li><a href="../contact.html" title="Contato">Contato</a></li>
@@ -57,7 +67,7 @@
           </div>
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open" title="Buscar"><span class="icon-search"></span></a>
-            <a href="usuario/login.html" class="icons-btn d-inline-block" title="Usuário"><span class="icon-user"></span></a>
+            <a href="../usuario/login.html" class="icons-btn d-inline-block" title="Usuário"><span class="icon-user"></span></a>
             <a href="carrinho.html" class="icons-btn d-inline-block bag" title="Carrinho">
               <span class="icon-shopping-bag"></span>
               <!-- <span class="number">2</span> -->       
@@ -70,7 +80,7 @@
     <div class="custom-border-bottom py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="home.php">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Produtos</strong></div>
+          <div class="col-md-12 mb-0"><a href="../home.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Produtos</strong></div>
         </div>
       </div>
     </div>
@@ -112,8 +122,8 @@
         foreach($produtos as $produto){   
           
            echo $produtos_sub."<div class='quatro'><img style='width: 200px;height: 200px;' src='../Upload/produtos/".$produto['img']."'>";
-           echo $produtos_sub."<b><h6>".$produto['tipo']."</b><br>".$produto['nome']."<p style='color: red;'>R$ ".$produto['valor']."</p><form action='prodInfo.html'><button class='btn-sm btn-outline-primary' 
-           style='width: 60%;' type='submit' formaction='prodInfo.html'>Comprar</button></form></h6></div>";
+           echo $produtos_sub."<b><h6>".$produto['tipo']."</b><br>".$produto['nome']."<p style='color: red;'>R$ ".$produto['valor']."</p><form action='produtos.php'><button class='btn-sm btn-outline-primary' 
+           style='width: 60%;' type='submit' name='cod' value='produtos&".($produto['cod']-1)."'>Comprar</button></form></h6></div>";
           }
         }
         

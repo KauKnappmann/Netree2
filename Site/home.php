@@ -49,7 +49,6 @@ if (!isset($_GET['erro'])){
              $html = str_replace('{{adm}}',
              '<li class="has-children "><a href="usuario/adm.html" title="Administrar">Administrar</a>
              <ul class="dropdown">
-             <li><a href="usuario/adm.php?do=compras" title="Compras">Compras</a></li>
              <li><a href="usuario/usuarios.php" title="Usuários">Usuários</a></li>
              <li class="has-children"><a href="#" title="Estoque">Outros</a>
              <ul class="dropdown">
@@ -79,7 +78,7 @@ if (!isset($_GET['erro'])){
 
 <?php
 
- //CATALOGO
+ //CATALOGO PLANTA
     $plantas = $adm->view("plantas");
     $plantas_sub = "";
  
@@ -97,7 +96,28 @@ if (!isset($_GET['erro'])){
     
 
     }
+
+     //CATALOGO produtos
+
+    // $produtos = $adm->view("produtos");
+    // $produto_sub = "";
+ 
+    
+    // if(count($produtos)>0){
+    //     echo "&nbsp‎";
+    // foreach($produtos as $produto){   
+        
+    //     $produto_sub = $produto_sub."<div class='item'><div class='item-entry'><a href='produto/prodInfo.html' class='product-item md-height bg-gray d-block'><img style='width: 250px;height: 250px;' src='Upload/Plantas/".$produto['img']."' alt='Image' class='img-fluid'></a>";
+    //     $produto_sub = $produto_sub."<h2 class='item-title'><a href='produto/prodInfo.html'>".$produto['nome']."</a></h2>";
+    //     $produto_sub = $produto_sub."<strong class='item-price'>R$".$produto['valor']."</strong> 
+    //    </div></div>\n \n";
+    
+    // }
+    
+
+    // }
     $html = str_replace('{{plantas}}',$plantas_sub,$html);
+    // $html = str_replace('{{plantas}}','{{produtos}}',$plantas_sub,$produto_sub);
 //header("location:index.html");
 echo $html;
 ?>

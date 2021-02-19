@@ -119,40 +119,32 @@
               <p class="mb-0" id="valorTotalProduto">R${{valor}} a unidade</p><br>
               Quantidade:  
               <div class="input-group mb-3" style="max-width: 120px;">
-                        <div class="input-group-prepend">
+                        <!-- <div class="input-group-prepend">
                          <button class="btn btn-outline-primary js-btn-minus"  onclick="exclui()" type="button">&minus;</button>
                         </div>
-                        <input type="text" class="form-control text-center" name="valorQuant" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <input type="text" class="form-control text-center" name="valorQuant" aria-label="Example text with button addon" >
+                        <script>document.write(" [ "+valorQuant+" ] ")</script>
                         <div class="input-group-append">
                           <button class="btn btn-outline-primary js-btn-plus"  onclick="soma()" type="button">&plus;</button>
-                        </div>
+                        </div> -->
+                        <button onclick="soma()" style="float: right;">+</button>
+                    <h6 id="valorQuant" style="float: right;" value="1"><script>document.write(valorQuant)</script></h6>
+                    <button onclick="exclui()" style="float: right;">-</button>
                       </div>
                 <p class="mb-0" id="valorTotalProduto"></p>      
             </div>
 <script>
-  //   	var sitePlusMinus = function() {
-	// 	$('.js-btn-minus').on('click', function(e){
-	// 		e.preventDefault();
-	// 		if ( $(this).closest('.input-group').find('.form-control').val() != 0  ) {
-	// 			$(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) - 1);
-	// 		} else {
-	// 			$(this).closest('.input-group').find('.form-control').val(parseInt(0));
-	// 		}
-	// 	});
-	// 	$('.js-btn-plus').on('click', function(e){
-	// 		e.preventDefault();
-	// 		$(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) + 1);
-	// 	});
-	// };
-	// sitePlusMinus();
-
+  
+ valorQuant=1;
  valor = "{{valor}}";
+ document.write(valor);
+ document.write(valorQuant);
  function soma(){
    //quantidade = document.getElementById("quantidade").value;
 
     valorQuant = valorQuant+ 1;
 
-     document.getElementById("valorQuant").innerHTML = " [ "+valorQuant+" ] ";
+     document.getElementById("valorQuant").innerHTML = valorQuant;
      valorT();
 }
 function exclui(){
@@ -160,7 +152,7 @@ function exclui(){
 
     valorQuant = valorQuant- 1;
 
-     document.getElementById("valorQuant").innerHTML = " [ "+valorQuant+" ] ";
+     document.getElementById("valorQuant").innerHTML = valorQuant;
      valorT();
 }
 function valorT(){

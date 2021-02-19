@@ -58,7 +58,7 @@
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="has-children ">
-                  <a href="home.php" title="Produtos">Produtos</a>
+                  <a href="#" title="Produtos">Produtos</a>
                   <ul class="dropdown">
                     <li><a href="MostraPlantas.php" title="Plantas">Plantas</a></li>
                     <li><a href="MostraProdutos.php" title="Outros">Outros</a></li>
@@ -71,7 +71,7 @@
           </div>
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open" title="Buscar"><span class="icon-search"></span></a>
-            <a href="usuario/login.html" class="icons-btn d-inline-block" title="Usuário"><span class="icon-user"></span></a>
+            <a href="../usuario/login.html" class="icons-btn d-inline-block" title="Usuário"><span class="icon-user"></span></a>
             <a href="../carrinho.html" class="icons-btn d-inline-block bag" title="Carrinho">
               <span class="icon-shopping-bag"></span>
               <!-- <span class="number">2</span> -->       

@@ -49,9 +49,9 @@ if (!isset($_GET['erro'])){
              $html = str_replace('{{adm}}',
              '<li class="has-children "><a href="usuario/adm.html" title="Administrar">Administrar</a>
              <ul class="dropdown">
-             <li><a href="usuario/usuarios.php" title="Usuários">Usuários</a></li>
-             <li class="has-children"><a href="#" title="Estoque">Outros</a>
+             <li  class="has-children"><a href="#" title="Visualizar">Visualizar</a>
              <ul class="dropdown">
+             <li><a href="usuario/usuarios.php" title="Usuários">Usuários</a></li>
              <li><a href="produto/RegistrosPlantas.php" title="Plantas">Plantas</a></li>
              <li><a href="produto/RegistrosProdutos.php" title="Produtos">Produtos</a></li>
              </ul></li>

@@ -41,8 +41,8 @@
       <div class="search-wrap">
         <div class="container">
           <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
-          <form action="#" method="post">
-            <input type="text" class="form-control" placeholder="Oi, o que procura hoje? :)">
+          <form action="./MostraPlantas.php" method="GET">
+            <input type="text" name="search" class="form-control" placeholder="Oi, o que procura hoje? :)">
           </form>  
         </div>
       </div>
@@ -106,21 +106,25 @@
     <div class="row">
         <?php
 
-        try{
+        try {
           include_once "../conf/Conexao.php";
           
           require "../classes/adm.php";
           
           $pdo = Conexao::getInstance();
           $adm = new Adm($pdo);
-          }catch(Exception $e){
-              echo $e->getCode();
-          }
-          
-        $plantas = $adm->view("plantas");
+        } catch(Exception $e) {
+          echo $e->getCode();
+        }
+        
+        if(isset($_GET['search'])) {
+          $plantas = $adm->search("plantas", $_GET['search']);
+        } else {
+          $plantas = $adm->view("plantas");
+        }
+        
         $plantas_sub = "";
     
-        
         if(count($plantas)>0){
     
         foreach($plantas as $planta){   

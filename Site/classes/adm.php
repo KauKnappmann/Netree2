@@ -115,6 +115,22 @@ class Adm{
 
     }
 
+    public function search($table, $search){
+
+        $sql = "SELECT * FROM ".$table.
+                " WHERE nome LIKE :search";
+        
+        $search = '%'.$search.'%';
+
+        $stmt = $this->pdo->prepare($sql);
+        
+        $stmt->bindParam(":search", $search, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+
+    }
+
 
 //função de deletamento geral
     public function delete($table,$cod){

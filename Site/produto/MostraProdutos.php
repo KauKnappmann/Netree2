@@ -47,7 +47,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-            <a href="../home.html" class="js-logo-clone" title="Início">NeTree</a>
+            <a href="../home.php" class="js-logo-clone" title="Início">NeTree</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
@@ -80,7 +80,7 @@
     <div class="custom-border-bottom py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="../home.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Produtos</strong></div>
+          <div class="col-md-12 mb-0"><a href="../home.php">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Produtos</strong></div>
         </div>
       </div>
     </div>

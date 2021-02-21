@@ -137,31 +137,7 @@ class Adm{
 
         $sql = "DELETE FROM ";
     
-        switch ($table){
-    
-            case 0:
-    
-             $sql = $sql."Plantas WHERE codPlanta = ";
-    
-            break;
-    
-            case 1:
-    
-             $sql = $sql."Usuario WHERE codUsuario = "; 
-    
-    
-            break;
-    
-            case 2:
-    
-             $sql = $sql."produtos WHERE codProdutos = ";
-    
-            break;
-    
-    
-        }
-    
-        $sql = $sql.$cod;
+        $sql = $sql. $table." WHERE cod = ".$cod;
     
         $stmt = $this->pdo->prepare($sql);
         try{
@@ -170,37 +146,15 @@ class Adm{
         }catch(Exception $e){
          return $e->getMessage();
         }
-        
     
     }
 
     public function update($table,$info,$cod){
 
-        $sql = "UPDATE ";
+        $sql = "UPDATE ".$table." SET ";
         
         $keys = array_keys($info);
 
-        switch ($table){
-
-            case 0:
-
-             $sql = $sql."plantas SET ";
-
-            break;
-
-            case 1:
-
-             $sql = $sql."Usuario SET "; 
-
-            break;
-
-            case 2:
-
-             $sql = $sql."produtos SET ";
-
-            break;
-
-        }
 
         for($i=0;$i<count($info);$i++){
             
@@ -211,7 +165,7 @@ class Adm{
         }
 
          $sql = $sql." WHERE cod =".$cod;
-        echo $sql;
+        
          $stmt = $this->pdo->prepare($sql);
 
         foreach($info as $name=>&$value){

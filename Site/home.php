@@ -52,8 +52,8 @@ if (!isset($_GET['erro'])){
              <li  class="has-children"><a href="#" title="Visualizar">Visualizar</a>
              <ul class="dropdown">
              <li><a href="usuario/usuarios.php" title="Usuários">Usuários</a></li>
-             <li><a href="produto/RegistrosPlantas.php" title="Plantas">Plantas</a></li>
-             <li><a href="produto/RegistrosProdutos.php" title="Produtos">Produtos</a></li>
+             <li><a href="produto/registros.php?table=plantas" title="Plantas">Plantas</a></li>
+             <li><a href=produto/registros.php?table=produtos" title="Produtos">Produtos</a></li>
              </ul></li>
              <li class="has-children"><a href="#" title="Cadastros">Cadastros</a>
              <ul class="dropdown">

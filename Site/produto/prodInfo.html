@@ -77,7 +77,7 @@
     <div class="custom-border-bottom py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="../home.php">Home</a> /<strong class="text-black"><a href="#">{{tabela}}</a></strong> / <strong class="text-black">{{local}}</strong></div>
+          <div class="col-md-12 mb-0"><a href="../home.php">Home</a> /<strong class="text-black"><a href="#"><p>{{tabela}}</p></a></strong> / <strong class="text-black">{{local}}</strong></div>
         </div>
       </div>
     </div>
@@ -126,7 +126,7 @@
                         <br>
                       </div>  
                       <p class="mb-0" id="valorTotalProduto">R${{valor}} a unidade</p><br>   
-                      <form action="produtos.php" type="get"><button  class="btn-sm btn-outline-primary" style="width: 60%;" type="submit" name="cod" value="">Adicionar no carrinho</button></form>
+                      <form action="carrinho.php" type="get"><input type="hidden" name="valorQuant"><input type="hidden" value="1" name="quantidade"><input type="hidden" value="{{tabela}}" name="tipo"><button  class="btn-sm btn-outline-primary" style="width: 60%;" type="submit" name="cod" value="{{id}}">Adicionar no carrinho</button></form>
             </div>
 <script>
   

@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
-    <link rel="stylesheet" href="css/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="css/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/css/magnific-popup.css">
-    <link rel="stylesheet" href="css/css/jquery-ui.css">
-    <link rel="stylesheet" href="css/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/css/owl.theme.default.min.css">
-    <link rel="icon" href="css/Images/logoVerde.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/css/aos.css">
-    <link rel="stylesheet" href="css/css/style.css">
-    <script type="text/javascript" src="css/js/cards.js"></script>
+    <link rel="stylesheet" href="../css/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/css/owl.theme.default.min.css">
+    <link rel="icon" href="../css/Images/logoVerde.png" type="../image/x-icon" />
+    <link rel="stylesheet" href="../css/css/aos.css">
+    <link rel="stylesheet" href="../css/css/style.css">
+    <script type="text/javascript" src="../css/js/cards.js"></script>
     <!-- <script>
       
       alert("Programador, não esqueça de atualizar o git");
@@ -81,7 +81,7 @@
     </div>
     
     <!-- img de fundo -->
-    <div class="site-blocks-cover inner-page" style="background-image: url('css/images/background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center">
+    <div class="site-blocks-cover inner-page" style="background-image: url('../css/images/background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center">
         <div class="container">
           <div class="row">
           
@@ -106,28 +106,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td class="product-thumbnail">
-                        <img src="images/cloth_1.jpg" alt="Image" class="img-fluid">
-                      </td>
-                      <td class="product-name">
-                        <h2 class="h5 text-black">Top Up T-Shirt</h2>
-                      </td>
-                      <td>$49.00</td>
-                      <td>
-                        <div class="input-group mb-3" style="max-width: 120px;">
-                          <div class="input-group-prepend">
-                            <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                          </div>
-                          <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                          <div class="input-group-append">
-                            <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                          </div>
-                        </div>
-                      </td>
-                      <td>$49.00</td>
-                      <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                    </tr>
+                    {{item}}
                   </tbody>
                 </table>
               </div>

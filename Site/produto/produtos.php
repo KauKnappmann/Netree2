@@ -22,7 +22,7 @@ $html = file_get_contents("prodInfo.html");
 
 if($cod[1] !=null){
 
-    $html = str_replace('{{tabela}}',"<p>".$cod[0]."</p>",$html);
+    $html = str_replace('{{tabela}}',$cod[0],$html);
 
     $html = str_replace('{{nome}}',$toProd[$cod[1]]['nome'],$html);
 
@@ -33,6 +33,8 @@ if($cod[1] !=null){
     $html = str_replace('{{local}}',$toProd[$cod[1]]['nome'],$html);
     
     $html = str_replace('{{tipo}}',$toProd[$cod[1]]['tipo'],$html);
+  
+    $html = str_replace('{{id}}',$toProd[$cod[1]]['cod']-1,$html);
     }else{
     $html = str_replace('{{nome}}',"error",$html);
     

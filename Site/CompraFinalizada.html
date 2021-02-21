@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NeTree</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="css/fonts/icomoon/style.css">
+    <link rel="icon" href="css/Images/logoVerde.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css/magnific-popup.css">
+    <link rel="stylesheet" href="css/css/jquery-ui.css">
+    <link rel="stylesheet" href="css/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/css/aos.css">
+    <link rel="stylesheet" href="css/css/style.css">
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+    
+
+    <div class="site-navbar bg-white py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Oi, o que procura hoje? :)">
+          </form>  
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="home.php" class="js-logo-clone" title="Início">NeTree</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="has-children ">
+                  <a href="#" title="Produtos">Produtos</a>
+                  <ul class="dropdown">
+                    <li><a href="produto/MostraPlantas.php" title="Plantas">Plantas</a></li>
+                    <li><a href="produto/MostraProdutos.php" title="Outros">Outros</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html" title="Contato">Contato</a></li>
+                <li><a href="sobre.html" title="Sobre a equipe">Sobre a NeTree</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open" title="Buscar"><span class="icon-search"></span></a>
+            <a href="usuario/login.html" class="icons-btn d-inline-block" title="Usuário"><span class="icon-user"></span></a>
+            <a href="carrinho.html" class="icons-btn d-inline-block bag" title="Carrinho">
+              <span class="icon-shopping-bag"></span>
+              <!-- <span class="number">2</span> -->       
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="custom-border-bottom py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="home.php">Home</a> <span class="mx-2 mb-0">/</span><a href="carrinho.html">Carrinho</a> <span class="mx-2 mb-0">/</span><strong class="text-black">Finalizar compra</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- img de fundo -->
+    <div class="site-blocks-cover inner-page" style="background-image: url('css/images/background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center">
+      <div class="container">
+        <div class="row">
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="h3 mb-3 text-black">Confira e finalize seu pedido</h2>
+          </div>
+          <div class="col-md-7">
+
+            <form action="enviar.php" method="post">
+              
+              <div class="p-3 p-lg-5 border">
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="c_fname" class="text-black">Endereço de entrega<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="name" name="name">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="c_lname" class="text-black">CEP<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="lastname" name="lastname">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <div class="form-check">
+                    <label for="pagamento" class="text-black">Forma de pagamento<span class="text-danger">*</span></label><br>
+                    <input type="radio"  class="form-check-input"  id="Cartao" name="pagamento" value="cartao"> 
+                    <label for="cartao">Cartão</label><br>
+                    <input type="radio" class="form-check-input" id="boleto" name="pagamento" value="boleto">
+                    <label for="boleto">Boleto</label><br>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_subject" class="text-black">Produtos</label>
+                    <br>
+                    //listar produtos do carrinho
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <div class="form-check">
+                    <label for="c_message" class="text-black">Entrega</label><br>
+                    <input type="radio" class="form-check-input"  id="correios" name="envio" value="correios"> 
+                    <label for="correios">Correios</label><br>
+                    <input type="radio" class="form-check-input"  id="trapostadora" name="envio" value="trapostadora">
+                    <label for="trapostadora">Transportadora</label>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </form>
+        </div>
+    </div>
+        <div class="row">
+        <!-- <div class="col-md-5 ml-auto">
+            <div class="p-4 border mb-3">
+              <span class="d-block text-primary h6 text-uppercase">Brasil</span>
+              <p class="mb-0">R. Abraham Lincoln, 210 - Jardim América, Rio do Sul - SC, 89160-202</p>
+            </div>
+          </div> -->
+          <div class="col-md-5 ml-auto" style="margin-top: -510px;">
+            <div class="p-4 border mb-3">
+              <div class="block-5 mb-5">
+                <h3 class="footer-heading mb-4">Finalizar pedido</h3>
+                <ul class="list-unstyled">
+                    <li class="value">Valor Final:</li>
+                  <li><form action=''><button type="button" class="btn btn-primary btn-lg btn-block">Finalizar compra</button></form></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer custom-border-top"></footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+           
+            Developed by Alessandra, Camila, Diógenes, Hanattan, Kauana, Maria and Mateus. <br>&copy;<script>document.write(new Date().getFullYear());</script> <i class="icon-heart" aria-hidden="true"></i>
+            
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

@@ -30,7 +30,7 @@ $item = '<tr>
                       </td>
                       <td>$'.$infos['valor'].'</td>
                       <td>                    
-                          <p>1</p>
+                          <p>'.$quantidade.'</p>
                       </td>
                       <td>$49.00</td>
                       <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>

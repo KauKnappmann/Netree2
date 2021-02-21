@@ -114,42 +114,38 @@
               <p class="mb-0">Tipo: {{tipo}}</p><br>
               Quantidade:  
               <div class="input-group mb-3" style="max-width: 120px;">
-                       <div class="input-group-prepend">
-                         <button class="btn btn-outline-primary"  onclick="exclui()">&minus;</button>
-                        </div>
-                        <!-- <h6 id="valorQuant" style="float: right;" value="1"><script>document.write(valorQuant)</script></h6></input> -->
-                        <input type="text" disabled class="form-control text-center" name="valorQuant" id="valorQuant" value="1">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-primary"  onclick="soma()">&plus;</button>
-                        </div>
+                <form action="carrinho.php" type="get">
+                       <input type="number" name="quantidade" value="1">
                         <br>
                         <br>
                       </div>  
                       <p class="mb-0" id="valorTotalProduto">R${{valor}} a unidade</p><br>   
-                      <form action="carrinho.php" type="get"><input type="hidden" name="valorQuant"><input type="hidden" value="1" name="quantidade"><input type="hidden" value="{{tabela}}" name="tipo"><button  class="btn-sm btn-outline-primary" style="width: 60%;" type="submit" name="cod" value="{{id}}">Adicionar no carrinho</button></form>
+                      <input type="hidden" value="{{tabela}}" name="tipo">
+                      <button  class="btn-sm btn-outline-primary" style="width: 60%;" type="submit" name="cod" value="{{id}}">Adicionar no carrinho</button>
+                    </form>
             </div>
 <script>
   
- valorQuant=1;
+ quantidade=1;
  valor = "{{valor}}";
 
  function soma(){
    
-    valorQuant = valorQuant+ 1;
+    quantidade = quantidade+ 1;
 
-     document.getElementById("valorQuant").value = valorQuant;
+     document.getElementById("quantidade").value = quantidade;
      valorT();
 }
 function exclui(){
    
-    valorQuant = valorQuant- 1;
+    quantidade = quantidade- 1;
 
-     document.getElementById("valorQuant").value = valorQuant;
+     document.getElementById("quantidade").value = quantidade;
      valorT();
 }
 function valorT(){
 
- valorTotalProduto =  valorQuant* valor;
+ valorTotalProduto =  quantidade* valor;
 
  document.getElementById("valorTotalProduto").innerHTML = "Valor total: R$" + valorTotalProduto;
     

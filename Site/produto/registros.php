@@ -35,9 +35,6 @@ $tableInfos = $adm->view($table);
 $sub = "";
 
 
-
-
-
 if(count($tableInfos)>0){
 
 foreach($tableInfos as $tableInfo){   

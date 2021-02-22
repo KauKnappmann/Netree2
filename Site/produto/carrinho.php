@@ -27,11 +27,14 @@ $_SESSION['carrinho'] = array(array($tipo,$cod,$quantidade));
 $html = file_get_contents("carrinho.html"); 
 $infos = $adm->view($tipo);
 
-
+$valorFinal = 0;
 
 $item="";
 foreach($_SESSION['carrinho'] as $itens){
 
+ $valorTotalItem=$quantidade*$infos[$itens[1]]['valor']; 
+ 
+$valorFinal +=$valorTotalItem;
     $item = $item.'<tr>
                       <td class="product-thumbnail">
                         
@@ -47,7 +50,7 @@ foreach($_SESSION['carrinho'] as $itens){
                           
                           <p>'.$itens[2].'</p>
                       </td>
-                      <td>$49.00</td>
+                      <td>'.$valorTotalItem.'</td>
                       <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
                     </tr>';
 
@@ -55,7 +58,7 @@ foreach($_SESSION['carrinho'] as $itens){
                 }
 
 $html = str_replace('{{item}}',$item,$html);
-//$html = str_replace('{{total}}',$total,$html);
+$html = str_replace('{{total}}',$valorFinal ,$html);
 echo $html
 
 ?>

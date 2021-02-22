@@ -53,7 +53,7 @@
           </div>
           <div class="icons">
             <a href="../usuario/login.html" class="icons-btn d-inline-block" title="Usuário"><span class="icon-user"></span></a>
-            <a href="carrinho.html" class="icons-btn d-inline-block bag" title="Carrinho">
+            <a href="carrinho.php" class="icons-btn d-inline-block bag" title="Carrinho">
               <span class="icon-shopping-bag"></span>
               <!-- <span class="number">2</span> -->       
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
@@ -127,7 +127,7 @@
   
                   <div class="row">
                     <div class="col-md-12">
-                      <button class="btn btn-primary btn-lg btn-block" onclick="window.location='checkout.html'">Confirmar compra</button>
+                      <form action="finalCompra.php" method="POST"><button class="btn btn-primary btn-lg btn-block" name="valor" value="{{total}}">Confirmar compra</button></form>
                     </div>
                   </div>
                 </div>

@@ -26,7 +26,7 @@ if($cod[1] !=null){
 
     $html = str_replace('{{nome}}',$toProd[$cod[1]]['nome'],$html);
 
-    $html = str_replace('{{img}}',"<img style='width:285px;height: 285px;' src='../Upload/".$cod[0]."/".$toProd[$cod[1]]['img']."'>",$html);
+    $html = str_replace('{{img}}',$cod[0]."/".$toProd[$cod[1]]['img'],$html);
     
     $html = str_replace('{{valor}}',$toProd[$cod[1]]['valor'],$html);
     

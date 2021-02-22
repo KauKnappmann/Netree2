@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/css/aos.css">
     <link rel="stylesheet" href="../css/css/style.css">
     <script type="text/javascript" src="../css/js/cards.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <style>
       .displayed {
         text-align: center; }
@@ -115,42 +115,14 @@
               Quantidade:  
               <div class="input-group mb-3" style="max-width: 120px;">
                 <form action="carrinho.php" type="get">
-                       <input class="form-control" type="number" name="quantidade" value="1">
+                       <input class="form-control" type="number" name="quantidade" value="1" min="1" max="10" >
                       </div>  
-                      <p class="mb-0" id="valorTotalProduto">R${{valor}} a unidade</p><br>   
+                      <p class="mb-0" id="valorTotalProduto">R${{valor}} a unidade</p><br>  
+                      <meu-botao></meu-botao>
                       <input type="hidden" value="{{tabela}}" name="tipo">
                       <button  class="btn-sm btn-outline-primary" style="width: 60%;" type="submit" name="cod" value="{{id}}">Adicionar no carrinho</button>
                     </form>
             </div>
-<script>
-  
- quantidade=1;
- valor = "{{valor}}";
-
- function soma(){
-   
-    quantidade = quantidade+ 1;
-
-     document.getElementById("quantidade").value = quantidade;
-     valorT();
-}
-function exclui(){
-   
-    quantidade = quantidade- 1;
-
-     document.getElementById("quantidade").value = quantidade;
-     valorT();
-}
-function valorT(){
-
- valorTotalProduto =  quantidade* valor;
-
- document.getElementById("valorTotalProduto").innerHTML = "Valor total: R$" + valorTotalProduto;
-    
-}
-
-</script>
-
           </div>
         </div>
       </div>

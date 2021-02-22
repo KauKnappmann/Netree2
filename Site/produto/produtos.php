@@ -16,25 +16,26 @@ $cod = isset($_GET['cod']) ? $_GET['cod'] : null;
 $cod = explode("&",$cod);
 
 $toProd = $adm->view($cod[0]);
-
+$posi = $cod[1];
+$id = $cod[2];
 $html = file_get_contents("prodInfo.html");
 
 
-if($cod[1] !=null){
+if($posi !=null){
 
     $html = str_replace('{{tabela}}',$cod[0],$html);
 
-    $html = str_replace('{{nome}}',$toProd[$cod[1]]['nome'],$html);
+    $html = str_replace('{{nome}}',$toProd[$posi]['nome'],$html);
 
-    $html = str_replace('{{img}}',$cod[0]."/".$toProd[$cod[1]]['img'],$html);
+    $html = str_replace('{{img}}',$cod[0]."/".$toProd[$posi]['img'],$html);
     
-    $html = str_replace('{{valor}}',$toProd[$cod[1]]['valor'],$html);
+    $html = str_replace('{{valor}}',$toProd[$posi]['valor'],$html);
     
-    $html = str_replace('{{local}}',$toProd[$cod[1]]['nome'],$html);
+    $html = str_replace('{{local}}',$toProd[$posi]['nome'],$html);
     
-    $html = str_replace('{{tipo}}',$toProd[$cod[1]]['tipo'],$html);
+    $html = str_replace('{{tipo}}',$toProd[$posi]['tipo'],$html);
   
-    $html = str_replace('{{id}}',$toProd[$cod[1]]['cod']-1,$html);
+    $html = str_replace('{{id}}',$toProd[$posi]['cod']-1,$html);
     }else{
     $html = str_replace('{{nome}}',"error",$html);
     

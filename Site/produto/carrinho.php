@@ -45,7 +45,7 @@ if(isset($_SESSION['carrinho']))
 foreach($_SESSION['carrinho'] as $itens){
 
   if($itens != null){
-
+    
  $valorTotalItem=$itens[3]*$itens[2]; 
  
 

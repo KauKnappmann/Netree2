@@ -29,6 +29,7 @@ $item="";
 $valorTotalItem=0;
 if(isset($_SESSION['carrinho']))
 foreach($_SESSION['carrinho'] as $itens){
+    if($itens!= null){
     $valorTotalItem=$itens[3]*$itens[2]; 
     $item = $item.'<tr>
                       <td class="product-thumbnail">
@@ -48,7 +49,7 @@ foreach($_SESSION['carrinho'] as $itens){
                       <td>'.$valorTotalItem.'</td>
                       
                     </tr>';
-
+}
 }
 
 $html = str_replace('{{carrinho}}',$item,$html);

@@ -123,12 +123,14 @@
     
         
         if(count($produtos)>0){
-    
+          $count = 0;
         foreach($produtos as $produto){   
-          
+
            echo $produtos_sub."<div class='quatro'><img style='width: 200px;height: 200px;' src='../Upload/produtos/".$produto['img']."'>";
-           echo $produtos_sub."<b><h6>".$produto['tipo']."</b><br>".$produto['nome']."<p style='color: red;'>R$ ".$produto['valor']."</p><form action='produtos.php'><button class='btn-sm btn-outline-primary' 
-           style='width: 60%;' type='submit' name='cod' value='produtos&".($produto['cod']-1)."'>Comprar</button></form></h6></div>";
+           echo $produtos_sub."<b><h6>".$produto['tipo']."</b><br>".$produto['nome']."<p style='color: red;'>R$ ".$produto['valor']."</p><form action='produtos.php'>
+           <button class='btn-sm btn-outline-primary' 
+           style='width: 60%;' type='submit' name='cod' value='produtos&".$count."&".($produto['cod']-1)."'>Comprar</button></form></h6></div>";
+          $count++;
           }
         }
         

@@ -34,11 +34,11 @@
 
     <div class="site-navbar bg-white py-2">
 
-      <div class="search-wrap">
+    <div class="search-wrap">
         <div class="container">
           <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
-          <form action="#" method="post">
-            <input type="text" class="form-control" placeholder="Oi, o que procura hoje? :)">
+          <form action="./MostraProdutos.php" method="GET">
+            <input type="text" name="search" class="form-control" placeholder="Oi, o que procura hoje? :)">
           </form>  
         </div>
       </div>
@@ -112,8 +112,13 @@
           }catch(Exception $e){
               echo $e->getCode();
           }
-          
-        $produtos = $adm->view("produtos");
+        
+          if(isset($_GET['search'])) {
+            $produtos = $adm->search("produtos", $_GET['search']);
+          } else {
+            $produtos = $adm->view("produtos");
+          }
+
         $produtos_sub = "";
     
         

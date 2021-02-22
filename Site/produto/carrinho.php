@@ -20,6 +20,7 @@ $html = file_get_contents("carrinho.html");
 $infos = $adm->view($tipo);
 
 $infos = $infos[$cod];
+$valorTotalItem=$quantidade*$infos['valor'];
 
 $item = '<tr>
                       <td class="product-thumbnail">
@@ -32,13 +33,14 @@ $item = '<tr>
                       <td>                    
                           <p>'.$quantidade.'</p>
                       </td>
-                      <td>$49.00</td>
+                      <td>'.$valorTotalItem.'</td>
                       <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
                     </tr>';
 
+$total = '<h2 class="h5 text-black">R$ '.$valorTotalItem.'</h2>';
 
 $html = str_replace('{{item}}',$item,$html);
-
+$html = str_replace('{{total}}',$total,$html);
 echo $html
 
 ?>

@@ -15,7 +15,13 @@ try{
 
 session_start();   
 
+$finalizou = isset($_POST['final']) ? $_POST['final'] : 0;
 
+if($finalizou==1){
+
+$_SESSION['carrinho'] = null;
+header("location: ../home.php");
+}
 $html = file_get_contents("CompraFinalizada.html"); 
 
 
@@ -27,11 +33,11 @@ foreach($_SESSION['carrinho'] as $itens){
     $item = $item.'<tr>
                       <td class="product-thumbnail">
                         
-                        <img src="../Upload/'.$itens[4].'" alt="Image" class="img-fluid">
+                        <img src="../Upload/'.$itens[4].'" style="width: 40px;height: 40px;" alt="Image" class="img-fluid">
                       </td>
                       <td class="product-name">
                         
-                        <h2 class="h5 text-black">'.$itens[1].'</h2>
+                        <h6 class="text-black">'.$itens[1].'</h6>
                       </td>
                       
                       <td>$'.$itens[2].'</td>
@@ -44,8 +50,7 @@ foreach($_SESSION['carrinho'] as $itens){
                     </tr>';
 
 }
-if($_GET != null)
-header("location:carrinho.php");
+
 $html = str_replace('{{carrinho}}',$item,$html);
 $html = str_replace('{{total}}',$_POST['valor'] ,$html);
 echo $html

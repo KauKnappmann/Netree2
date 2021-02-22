@@ -39,8 +39,10 @@ if (!isset($_GET['erro'])){
      
         //  echo "Bem vindo usuario ".$_SESSION['nome'];
         //  echo "<img class='fotoIcon' src='Upload/Plantas".$_SESSION['perfilPicture']."'>";
-         echo "<br><br><form method='POST'><button type='submit' value='true' name='logout'>deslogar</button></form>";   
-            
+         
+        $html = str_replace('{{deslogar}}','<form method="POST"><button type="submit"  value="true" name="logout">deslogar</button></form>',$html);  
+          
+          
          $viewAdm = $adm->view("administrador");
             
         foreach($viewAdm as $i){
@@ -71,7 +73,7 @@ if (!isset($_GET['erro'])){
  echo $adm->mensagemErro($_GET['erro']);
  $html = str_replace('{{nome}}'," ",$html);
  $html = str_replace('{{adm}}'," ",$html);
-
+ $html = str_replace('{{deslogar}}'," ",$html);
 ?>
 
 <?php

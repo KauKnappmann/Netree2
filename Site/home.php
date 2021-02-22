@@ -21,7 +21,7 @@ $logout = isset($_POST['logout']) ? $_POST['logout'] : false;
 
 if($logout){
     $logout= false;
-    echo "deslogado";
+    $html = str_replace('{{deslogado}}',"deslogado",$html);
     $_SESSION['login'] = 0;  
 }
 
@@ -74,6 +74,7 @@ if (!isset($_GET['erro'])){
  $html = str_replace('{{nome}}'," ",$html);
  $html = str_replace('{{adm}}'," ",$html);
  $html = str_replace('{{deslogar}}'," ",$html);
+ $html = str_replace('{{deslogado}}'," ",$html);
 ?>
 
 <?php
